@@ -31,7 +31,7 @@ class BonusServiceTest {
         assertEquals(expected, actual);
     }
     @Test
-    void shouldCalculateForNotRegisteredAndOverLimit() {
+    void shouldCalculateForNotRegisteredAndIsNotLimit() {
         BonusService service = new BonusService();
 
         long amount = 1000_60;
@@ -45,7 +45,7 @@ class BonusServiceTest {
 
     }
     @Test
-    void shouldCalculateForRegisteredAndOverLimit() {
+    void shouldCalculateForRegisteredAndIsNotLimit() {
         BonusService service = new BonusService();
 
         long amount = 1000_60;
