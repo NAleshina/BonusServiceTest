@@ -34,9 +34,9 @@ class BonusServiceTest {
     void shouldCalculateForNotRegisteredAndIsNotLimit() {
         BonusService service = new BonusService();
 
-        long amount = 1000_60;
+        long amount = 2_100_000;
         boolean registered = false;
-        long expected = 10;
+        long expected = 210;
 
         long actual = service.calculate(amount, registered);
         boolean passed = expected == actual;
@@ -48,9 +48,9 @@ class BonusServiceTest {
     void shouldCalculateForRegisteredAndIsNotLimit() {
         BonusService service = new BonusService();
 
-        long amount = 1000_60;
+        long amount = 2_100_000;
         boolean registered = true;
-        long expected = 30;
+        long expected = 500;
 
         long actual = service.calculate(amount, registered);
         boolean passed = expected == actual;
